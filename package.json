@@ -3,22 +3,18 @@
   "private": true,
   "packageManager": "pnpm@7.8.0",
   "scripts": {
-    "build": "vite-ssg build",
-    "dev": "vite --port 3333 --open",
+    "build": "vite build",
+    "dev": "vite --port 4396",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "preview-https": "serve dist",
     "test": "vitest",
     "test:e2e": "cypress open",
     "test:unit": "vitest",
-    "typecheck": "vue-tsc --noEmit",
-    "up": "taze major -I"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@unocss/reset": "^0.45.26",
     "@vueuse/core": "^9.3.0",
-    "@vueuse/head": "^0.7.12",
-    "nprogress": "^0.2.0",
+    "@vueuse/head": "^0.7.13",
     "pinia": "^2.0.22",
     "vue": "^3.2.40",
     "vue-demi": "^0.13.11",
@@ -39,8 +35,6 @@
     "eslint": "^8.24.0",
     "eslint-plugin-cypress": "^2.12.1",
     "https-localhost": "^4.7.1",
-    "markdown-it-link-attributes": "^4.0.1",
-    "markdown-it-shiki": "^0.5.1",
     "pnpm": "^7.12.2",
     "shiki": "^0.11.1",
     "taze": "^0.8.2",
@@ -52,11 +46,7 @@
     "vite-plugin-inspect": "^0.7.4",
     "vite-plugin-pages": "^0.26.0",
     "vite-plugin-pwa": "^0.13.1",
-    "vite-plugin-vue-component-preview": "^0.3.3",
     "vite-plugin-vue-layouts": "^0.7.0",
-    "vite-plugin-vue-markdown": "^0.22.1",
-    "vite-ssg": "^0.20.2",
-    "vite-ssg-sitemap": "^0.4.3",
     "vitest": "^0.23.4",
     "vue-tsc": "^0.40.13"
   }
