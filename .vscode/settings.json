@@ -3,6 +3,11 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
+  "i18n-ally.enabledFrameworks": [
+    "vue-sfc",
+    "vue"
+  ],
+  "i18n-ally.displayLanguage": "zh-CN",
   "prettier.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true

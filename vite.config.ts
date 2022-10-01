@@ -25,6 +25,7 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
+      exclude: ['modules/**/!(index).vue'],
       extensions: ['vue'],
     }),
 
@@ -43,7 +44,8 @@ export default defineConfig({
       ],
       dts: 'src/types/auto-imports.d.ts',
       dirs: [
-        'src/composables',
+        'src/composables/**',
+        'src/helpers/**',
         'src/store',
       ],
       vueTemplate: true,
@@ -110,10 +112,5 @@ export default defineConfig({
     deps: {
       inline: ['@vue', '@vueuse', 'vue-demi'],
     },
-  },
-
-  ssr: {
-    // TODO: workaround until they support native ESM
-    noExternal: ['workbox-window', /vue-i18n/],
   },
 })
