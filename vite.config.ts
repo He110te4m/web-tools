@@ -54,7 +54,7 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-vue-components
     Components({
       // allow auto load markdown components under `./src/components/`
-      dirs: 'src/components/**/*.vue',
+      dirs: 'src/components/**',
       extensions: ['vue'],
       // allow auto import and register components used in markdown
       include: [/\.vue$/],
