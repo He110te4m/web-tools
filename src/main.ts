@@ -6,16 +6,16 @@ import generatedRoutes from '~pages'
 
 main()
 
-function main() {
+async function main() {
   const app = createApp(App)
 
   const router = getRouter()
 
   // Auto-load module
   const modules = import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true })
-  Object.values(modules).forEach((mod) => {
-    mod.install({ app, router })
-  })
+  await Promise.all(
+    Object.values(modules).map(mod => mod.install({ app, router })),
+  )
 
   app.use(router)
 
@@ -24,7 +24,6 @@ function main() {
 
 function getRouter() {
   const routes = setupLayouts(generatedRoutes)
-
   const router = createRouter({
     routes,
     history: createWebHashHistory(),
