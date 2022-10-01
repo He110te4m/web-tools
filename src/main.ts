@@ -9,10 +9,10 @@ main()
 function main() {
   const app = createApp(App)
 
-  const modules = import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true })
-
   const router = getRouter()
 
+  // Auto-load module
+  const modules = import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true })
   Object.values(modules).forEach((mod) => {
     mod.install({ app, router })
   })
