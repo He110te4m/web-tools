@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import generatedRoutes from '~pages'
 
-const menu = genMenu(generatedRoutes)
+const menu = genMenu(generatedRoutes, [/^\/utils/])
 const [colNum, rowNum] = useToolsLayout(menu.length)
 
 const gap = computed(() => '12px')
