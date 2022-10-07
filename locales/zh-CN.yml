@@ -4,3 +4,10 @@ button:
   toggle_dark: 切换深色模式
   toggle_langs: 切换语言
 not-found: 未找到页面
+pages:
+  utils:
+    day_counter:
+      title: 倒数日
+    converter:
+      number:
+        title: 进制转换器

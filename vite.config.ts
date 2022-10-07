@@ -17,6 +17,12 @@ export default defineConfig({
     },
   },
 
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
+
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
