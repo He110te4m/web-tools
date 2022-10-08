@@ -15,15 +15,18 @@ function onAddCounter() {
   <h2 text="xl">
     {{ t('pages.utils.day_counter.title') }}
   </h2>
-  <dl>
-    <dd v-for="counter in counters" :key="`${counter.title}-${counter.targetTime}`">
-      {{ counter.title }}
-    </dd>
-  </dl>
 
   <button @click="onAddCounter">
     {{ t('add.button') }}
   </button>
+
+  <dl flex="~ col" gap="12px" my="12px" items="center">
+    <dd v-for="counter in counters" :key="`${counter.title}-${counter.targetTime}`" w="80%" mw="800px" p="x-4 y-2" border="~ color-gray-300" flex="~">
+      <div flex="auto">
+        {{ counter.title }}
+      </div>
+    </dd>
+  </dl>
 </template>
 
 <i18n lang="yml">
