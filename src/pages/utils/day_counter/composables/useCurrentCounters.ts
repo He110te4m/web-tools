@@ -4,7 +4,7 @@ import type { Counter } from '../types'
 const storeKey = 'UtilsDayCounter'
 
 export function useCurrentCounters() {
-  const { get, set } = useDBStore()
+  const { get, set } = useDB()
 
   const counters: Ref<Counter[]> = ref([])
 

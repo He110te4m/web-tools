@@ -9,9 +9,10 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
-  const IndexedDB: typeof import('../helpers/operators/indexedDB')['IndexedDB']
+  const IndexedDB: typeof import('../helpers/DIs/db/indexedDB')['IndexedDB']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
+  const checkDBKeys: typeof import('../helpers/DIs/db/checkDBKeys')['checkDBKeys']
   const computed: typeof import('vue')['computed']
   const computedAsync: typeof import('@vueuse/core')['computedAsync']
   const computedEager: typeof import('@vueuse/core')['computedEager']
@@ -35,7 +36,7 @@ declare global {
   const effectScope: typeof import('vue')['effectScope']
   const extendRef: typeof import('@vueuse/core')['extendRef']
   const formatNum: typeof import('../helpers/formatters/formatNum')['formatNum']
-  const genMenu: typeof import('../helpers/gen/menu')['genMenu']
+  const genMenu: typeof import('../helpers/generators/menu')['genMenu']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
@@ -138,7 +139,7 @@ declare global {
   const useCssVars: typeof import('vue')['useCssVars']
   const useCurrentElement: typeof import('@vueuse/core')['useCurrentElement']
   const useCycleList: typeof import('@vueuse/core')['useCycleList']
-  const useDBStore: typeof import('../store/db')['useDBStore']
+  const useDB: typeof import('../helpers/DIs/db/index')['useDB']
   const useDark: typeof import('@vueuse/core')['useDark']
   const useDateFormat: typeof import('@vueuse/core')['useDateFormat']
   const useDebounce: typeof import('@vueuse/core')['useDebounce']
@@ -289,9 +290,10 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly IndexedDB: UnwrapRef<typeof import('../helpers/operators/indexedDB')['IndexedDB']>
+    readonly IndexedDB: UnwrapRef<typeof import('../helpers/DIs/db/indexedDB')['IndexedDB']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
+    readonly checkDBKeys: UnwrapRef<typeof import('../helpers/DIs/db/checkDBKeys')['checkDBKeys']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly computedAsync: UnwrapRef<typeof import('@vueuse/core')['computedAsync']>
     readonly computedEager: UnwrapRef<typeof import('@vueuse/core')['computedEager']>
@@ -315,7 +317,7 @@ declare module '@vue/runtime-core' {
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly formatNum: UnwrapRef<typeof import('../helpers/formatters/formatNum')['formatNum']>
-    readonly genMenu: UnwrapRef<typeof import('../helpers/gen/menu')['genMenu']>
+    readonly genMenu: UnwrapRef<typeof import('../helpers/generators/menu')['genMenu']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
@@ -418,7 +420,7 @@ declare module '@vue/runtime-core' {
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useCurrentElement: UnwrapRef<typeof import('@vueuse/core')['useCurrentElement']>
     readonly useCycleList: UnwrapRef<typeof import('@vueuse/core')['useCycleList']>
-    readonly useDBStore: UnwrapRef<typeof import('../store/db')['useDBStore']>
+    readonly useDB: UnwrapRef<typeof import('../helpers/DIs/db/index')['useDB']>
     readonly useDark: UnwrapRef<typeof import('@vueuse/core')['useDark']>
     readonly useDateFormat: UnwrapRef<typeof import('@vueuse/core')['useDateFormat']>
     readonly useDebounce: UnwrapRef<typeof import('@vueuse/core')['useDebounce']>

@@ -14,6 +14,7 @@
     "@unocss/reset": "^0.45.26",
     "@vueuse/core": "^9.3.0",
     "@vueuse/head": "^0.7.13",
+    "awilix": "^7.0.3",
     "idb-keyval": "^6.2.0",
     "pinia": "^2.0.22",
     "vue": "^3.2.40",
