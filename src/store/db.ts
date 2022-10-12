@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { type DBKey, IndexedDB } from '~/helpers/gen/operators/indexedDB'
+import { type DBKey, IndexedDB } from '~/helpers/operators/indexedDB'
 
 const cacheKeys = Object.keys(import.meta.glob('../pages/**/index.vue', { eager: true }))
   .filter(key => key)

@@ -1,12 +1,5 @@
 import type { Ref } from 'vue'
-
-interface Counter {
-  title: string
-  /** 倒计时对应的时间 */
-  targetTime: number
-  /** 是否只展示天： 为 true 展示 X 天；为 false 展示 X 年 X 月 X 日 */
-  useDayUnit?: boolean
-}
+import type { Counter } from '../types'
 
 const storeKey = 'UtilsDayCounter'
 
@@ -25,7 +18,11 @@ export function useCurrentCounters() {
     set(storeKey, toRaw(val))
   }, { deep: true })
 
-  return { counters }
+  function add(counter: Counter) {
+    counters.value.push(counter)
+  }
+
+  return { counters, add }
 }
 
 function isValidCounters(data: unknown): data is Counter[] {
