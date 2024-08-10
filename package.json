@@ -1,10 +1,10 @@
 {
   "name": "vitesse-webext",
-  "displayName": "Vitesse WebExt",
+  "displayName": "Bookmark Sync",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.4.0",
-  "description": "[description]",
+  "description": "Bookmark sync extension",
   "scripts": {
     "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",
     "dev-firefox": "npm run clear && cross-env NODE_ENV=development EXTENSION=firefox run-p dev:*",

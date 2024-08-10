@@ -1,3 +1,4 @@
 import { useWebExtensionStorage } from '~/composables/useWebExtensionStorage'
 
-export const storageDemo = useWebExtensionStorage('webext-demo', 'Storage Demo')
+export const apiKey = useWebExtensionStorage(`${__NAME__}.api-key`, '')
+export const syncNodeID = useWebExtensionStorage(`${__NAME__}.sync-node-id`, '')
